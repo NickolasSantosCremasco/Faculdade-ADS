@@ -1,0 +1,25 @@
+/* HTML dá estrutura; CSS define a apresentação. */
+* { box-sizing: border-box; }
+body { margin: 0; padding: 24px; background: #f3f5ef; color: #18352b;
+  font: 16px/1.6 system-ui, sans-serif; }
+.cartao { max-width: 520px; margin: 20px auto; padding: 28px;
+  background: white; border: 1px solid #d7dfcd; border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(23, 60, 46, 0.12); }
+h1 { font-size: 28px; line-height: 1.2; color: #0f5a3c; }
+/* Personalização 2: contador de cálculos válidos */
+#contagem { margin: 12px 0 0; font-weight: bold; color: #173c2e; }
+.etiqueta { font-size: 12px; font-weight: bold; color: #526b3e; }
+label { display: block; margin-top: 14px; font-weight: bold; }
+input { width: 100%; padding: 12px; border: 1px solid #7c8b73;
+  border-radius: 8px; font: inherit; }
+.acoes { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+button { padding: 12px 18px; background: #173c2e; color: white;
+  border: 1px solid #173c2e; border-radius: 8px; cursor: pointer; font: inherit; }
+.secundario { background: white; color: #173c2e; }
+#resultado { padding: 14px; border-radius: 8px; background: #eef2e8; }
+/* JavaScript aplica estas classes conforme o resultado. */
+#resultado.sucesso { background: #d9f2df; color: #174b29; }
+#resultado.atencao { background: #fff0c7; color: #684900; }
+#resultado.erro { background: #ffe1df; color: #7c2019; }
+small { display: block; color: #53614d; }
+:focus-visible { outline: 3px solid #6f8527; outline-offset: 3px; }
