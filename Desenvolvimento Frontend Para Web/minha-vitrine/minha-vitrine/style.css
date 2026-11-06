@@ -1,0 +1,70 @@
+/* Estilos da vitrine "Setup Dev". Comentários explicam as alterações feitas. */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f4fa; /* ALTERAÇÃO 1: fundo azul bem claro (antes #f5f7f2). */
+  color: #1b2340;      /* Texto azul-marinho escuro: contraste alto com o fundo. */
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 16px; }
+
+header, footer {
+  background: #1b2340; /* ALTERAÇÃO 2: cabeçalho e rodapé azul-marinho (antes verde). */
+  color: #ffffff;
+}
+
+h1 { margin: 0 0 4px; }
+
+/* Cartões dos produtos. */
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ALTERAÇÃO 3: 4 colunas para caber o 4º produto. */
+  gap: 16px;
+}
+
+.produto {
+  background: #ffffff;
+  border: 1px solid #c5cde3;
+  border-radius: 12px; /* ALTERAÇÃO 4: cantos mais arredondados. */
+  padding: 16px;
+}
+
+.preco { font-weight: bold; color: #1b2340; }
+
+/* Botões: azul com texto branco (contraste adequado). */
+button {
+  background: #2748b8; /* ALTERAÇÃO 5: botões azuis (antes verdes). */
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:hover { background: #1a328a; }
+
+/* Mantém o foco do teclado bem visível (requisito de acessibilidade). */
+button:focus-visible {
+  outline: 3px solid #b45f00;
+  outline-offset: 3px;
+}
+
+.resumo {
+  margin-top: 24px;
+  background: #ffffff;
+  border: 1px solid #c5cde3;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* Telas médias: 2 colunas. */
+@media (max-width: 900px) {
+  .produtos { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Janela estreita: 1 coluna. */
+@media (max-width: 600px) {
+  .produtos { grid-template-columns: 1fr; }
+}

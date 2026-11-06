@@ -1,0 +1,54 @@
+IDENTIFICAÇÃO
+
+Nome: Nickolas Dos Santos Cremasco  
+RA: 47450363  
+Turma: ADS - SALA 502  
+Tema escolhido: Setup Dev (periféricos de tecnologia para programar)
+
+COMO ABRIR O SITE
+
+Extraia o ZIP, abra a pasta minha-vitrine e dê dois cliques em index.html (abre no navegador). Não precisa de internet nem de instalação.
+
+LISTA DE ALTERAÇÕES
+
+HTML (index.html):
+- Título, introdução e elemento `<title>` trocados para "Setup Dev".
+- Produtos renomeados: Teclado mecânico (R$ 250,00), Mouse sem fio (R$ 90,00), Headset (R$ 180,00).
+- 4º produto: Monitor 24" (R$ 450,00), botão com id exclusivo `adicionar-monitor`.
+
+CSS (style.css):
+- Fundo da página azul-claro (#f1f4fa).
+- Cabeçalho e rodapé azul-marinho (#1b2340).
+- Botões azuis (#2748b8) com texto branco; foco de teclado (outline) mantido.
+- Cartões com cantos mais arredondados.
+- Grade de 4 colunas (2 em telas médias, 1 em telas estreitas).
+
+JavaScript (script.js):
+- Novo `botaoMonitor` e novo `addEventListener` chamando `adicionarProduto("Monitor 24\"", 45000)`.
+- Preços em centavos atualizados para os novos produtos.
+- O botão Limpar não precisou mudar e funciona com o 4º produto.
+
+O PAPEL DE CADA TECNOLOGIA
+
+HTML define a estrutura e o conteúdo da página (títulos, produtos, botões e textos).
+CSS controla a aparência: cores, espaçamentos, grade de colunas e adaptação a telas pequenas.
+JavaScript dá comportamento à página: reage aos cliques, soma quantidade e total e atualiza a mensagem.
+
+TABELA DE TESTES (executados em Chromium automatizado, janela 1100px e 380px)
+
+| Teste | Observado | Status |
+|---|---|---|
+| Início | Quantidade 0, total R$ 0,00, "Nenhum produto adicionado." | passou |
+| Uma unidade | Mouse: 1 item, R$ 90,00 | passou |
+| Repetição | Mouse 2x: 2 itens, R$ 180,00 | passou |
+| Combinação | + Teclado: 3 itens, R$ 430,00 | passou |
+| Novo produto | + Monitor: 4 itens, R$ 880,00, mensagem "Monitor 24" adicionado" | passou |
+| Limpeza | Limpar: 0 itens, R$ 0,00, "Seleção limpa..." (também após adicionar o monitor) | passou |
+| Já vazio | Limpar com seleção vazia: "Sua seleção já está vazia." | passou |
+| Teclado | Enter em botão focado adiciona o item; Tab mostra contorno de foco de 3px | passou |
+| Janela estreita | Com 380px: 1 coluna, sem rolagem horizontal | passou |
+| ZIP | Extraído em outra pasta e aberto | passou (ZIP extraído em outra pasta; site abriu e funcionou sem erros) |
+
+CONCLUSÃO
+
+A vitrine foi personalizada com o tema Setup Dev, recebeu um quarto produto funcional e passou pelos testes de interação, cálculo, responsividade e navegação pelo teclado.

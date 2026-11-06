@@ -1,0 +1,58 @@
+<!doctype html> <!-- Informa que este documento usa HTML moderno. -->
+<html lang="pt-BR"> <!-- Identifica o idioma principal da página. -->
+<head> <!-- Configurações e referências a recursos. -->
+  <meta charset="utf-8"> <!-- Permite representar corretamente os acentos. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ajusta a visualização em celulares. -->
+  <title>Setup Dev — vitrine</title> <!-- Texto da aba do navegador (personalizado). -->
+  <link rel="stylesheet" href="style.css"> <!-- Carrega os estilos da mesma pasta. -->
+  <script src="script.js" defer></script> <!-- Carrega o script depois que o HTML for interpretado. -->
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Setup Dev</h1> <!-- Título personalizado: tema tecnologia. -->
+      <p>Monte o setup ideal para programar com conforto.</p> <!-- Apresentação personalizada. -->
+    </div>
+  </header>
+  <main class="container">
+    <h2>Produtos disponíveis</h2>
+    <div class="produtos">
+      <article class="produto">
+        <h3>Teclado mecânico</h3>
+        <p>Digitação rápida e confortável para longas sessões de código.</p>
+        <p class="preco">R$ 250,00</p>
+        <button id="adicionar-teclado" type="button">Adicionar teclado</button>
+      </article>
+      <article class="produto">
+        <h3>Mouse sem fio</h3>
+        <p>Leve, preciso e com bateria de longa duração.</p>
+        <p class="preco">R$ 90,00</p>
+        <button id="adicionar-mouse" type="button">Adicionar mouse</button>
+      </article>
+      <article class="produto">
+        <h3>Headset</h3>
+        <p>Foco total nas aulas online e nas reuniões.</p>
+        <p class="preco">R$ 180,00</p>
+        <button id="adicionar-headset" type="button">Adicionar headset</button>
+      </article>
+      <!-- QUARTO PRODUTO (exercício): id exclusivo no botão. -->
+      <article class="produto">
+        <h3>Monitor 24"</h3>
+        <p>Mais espaço de tela para editor, navegador e terminal.</p>
+        <p class="preco">R$ 450,00</p>
+        <button id="adicionar-monitor" type="button">Adicionar monitor</button>
+      </article>
+    </div>
+    <section class="resumo" aria-labelledby="titulo-resumo">
+      <h2 id="titulo-resumo">Sua seleção</h2>
+      <p>Quantidade: <span id="quantidade">0</span></p>
+      <p>Total: <span id="total">R$ 0,00</span></p>
+      <button id="limpar" type="button">Limpar seleção</button>
+      <p id="mensagem" role="status" aria-live="polite">Nenhum produto adicionado.</p>
+    </section>
+  </main>
+  <footer>
+    <p class="container">Projeto didático. Não realiza compras ou pagamentos.</p>
+  </footer>
+</body>
+</html>
